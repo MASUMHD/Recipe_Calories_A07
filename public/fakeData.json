@@ -1,0 +1,57 @@
+[
+    {
+      "image": "https://i.postimg.cc/Sx99vvhQ/Rectangle-20170.png",
+      "recipe_id": "1",
+      "recipe_name": "Spicy Basil Chicken",
+      "description": "A delicious and aromatic Thai-inspired dish with tender chicken and fresh basil leaves.",
+      "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaves"],
+      "preparing_time": "30",
+      "calories": "380"
+    },
+    {
+      "image": "https://i.postimg.cc/NMj5BNWH/Rectangle-20170-1.png",
+      "recipe_id": "2",
+      "recipe_name": "Garlic Butter Shrimp Pasta",
+      "description": "Creamy pasta with succulent shrimp, flavored with garlic butter and herbs.",
+      "ingredients": ["300 g shrimp", "250 g pasta", "4 cloves garlic"],
+      "preparing_time": "25",
+      "calories": "420"
+    },
+    {
+      "image": "https://i.postimg.cc/NMj5BNWH/Rectangle-20170-1.png",
+      "recipe_id": "3",
+      "recipe_name": "Vegetable Stir-Fry",
+      "description": "Colorful and nutritious stir-fried vegetables tossed in a savory sauce.",
+      "ingredients": ["200 g broccoli", "150 g bell peppers", "100 g carrots"],
+      "preparing_time": "20",
+      "calories": "220"
+    },
+    {
+      "image": "https://i.postimg.cc/NMj5BNWH/Rectangle-20170-1.png",
+      "recipe_id": "4",
+      "recipe_name": "Mushroom Risotto",
+      "description": "Creamy and rich risotto infused with the earthy flavors of mushrooms.",
+      "ingredients": ["300 g Arborio rice", "500 g mixed mushrooms", "2 cloves garlic"],
+      "preparing_time": "40",
+      "calories": "450"
+    },
+    {
+      "image": "https://i.postimg.cc/NMj5BNWH/Rectangle-20170-1.png",
+      "recipe_id": "5",
+      "recipe_name": "Classic Margherita Pizza",
+      "description": "Simple yet flavorful pizza topped with tomato sauce, mozzarella, and fresh basil.",
+      "ingredients": ["200 g pizza dough", "150 g tomato sauce", "200 g mozzarella cheese"],
+      "preparing_time": "15",
+      "calories": "320"
+    },
+    {
+      "image": "https://i.postimg.cc/NMj5BNWH/Rectangle-20170-1.png",
+      "recipe_id": "6",
+      "recipe_name": "Berry Smoothie Bowl",
+      "description": "Refreshing and nutritious smoothie bowl topped with fresh berries and granola.",
+      "ingredients": [ "100 g mixed berries", "150 ml almond milk", "50 g granola"],
+      "preparing_time": "10",
+      "calories": "250"
+    }
+  ]
+  
