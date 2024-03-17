@@ -33,12 +33,13 @@ function App() {
   return (
     <>
     <Header></Header> 
-    <Our></Our>
     <Banar></Banar>
+    <Our></Our>
     
     
     
-    <div className="container mx-auto md:flex mt-10 gap-1 md:gap-20 mr-2 md:mr-0 pl-0 md:pl-20 pr-0 md:pr-20">
+    
+    <div className="container mx-auto md:flex mt-10 gap-1 md:gap-10 max-w-7xl mb-16">
       <Blogs handleAddToBookmark={handleAddToBookmark}></Blogs>
       <Bookmarks bookmarks={bookmarks}></Bookmarks>
     </div>
