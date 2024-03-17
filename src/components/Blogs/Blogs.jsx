@@ -14,11 +14,12 @@ const blogs = ({handleAddToBookmark}) => {
     }) 
     return (
         
-        <div className='flex-1 grid grid-cols-1 md:grid-cols-2 gap-10   '>
+        <div className='flex-1 grid grid-cols-1 md:grid-cols-2 gap-10 '>
            
             {
                 blogs.map(blog => <Blog key={blog.id} blog={blog}
                 handleAddToBookmark={handleAddToBookmark}
+                
                 ></Blog>)
             }
         </div>
@@ -27,6 +28,7 @@ const blogs = ({handleAddToBookmark}) => {
 
 Blog.propTypes = {
     handleAddToBookmark: PropTypes.func
+    
 }
 
 export default blogs;

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { IoMdTime } from "react-icons/io";
 import { GiLoveHowl } from "react-icons/gi";
 import { ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Blog = ({ blog,handleAddToBookmark }) => {
   // console.log(blog);
@@ -27,7 +27,7 @@ const Blog = ({ blog,handleAddToBookmark }) => {
             <hr className="mt-3 mb-6" />
             <div>
               <h3 className="text-xl font-bold">Ingredients: 6</h3>
-              <ul className="ml-5 mt-3 text-[#878787]">
+              <ul className="ml-5 mt-3 text-[#878787] list-disc">
                 
                 <li>{
                     ingredients.map((ing, index) => <li key={index}>{ing}</li>)

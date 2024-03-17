@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import Bookmark from "../Bookmark/Bookmark";
+import Cooking from "../Cooking/Cooking";
 
 
-const Bookmarks = ({ bookmarks }) => {
+const Bookmarks = ({ bookmarks,handleAddToCooking,cooking,hideHeading  }) => {
   return (
     <div className=" md:w-[36%]">
       <div className=" flex-1 border-2 border-r-emerald-200 rounded-lg mt-10 md:mt-0">
@@ -24,7 +25,7 @@ const Bookmarks = ({ bookmarks }) => {
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody >
                 {/* row 1 */}
                 {bookmarks.map((bookmark, index) => (
                   <tr key={bookmark.recipe_id}>
@@ -33,7 +34,7 @@ const Bookmarks = ({ bookmarks }) => {
                     <td className="">{bookmark.preparing_time} minutes</td>
                     <td className="">{bookmark.calories} calories</td>
                     <td>
-                      <button onClick=""
+                      <button onClick={() =>handleAddToCooking(bookmark)}
 
                        className="btn bg-[#0BE58A] rounded-full">
                         Preparing
@@ -46,13 +47,13 @@ const Bookmarks = ({ bookmarks }) => {
           </div>
         </div>
         {bookmarks.map((bookmark) => (
-          <Bookmark key={bookmark.recipe_id} bookmark={bookmark}></Bookmark>
+          <Bookmark key={bookmark.recipe_id}   bookmark={bookmark}></Bookmark>
         ))}
       </div>
 
       <div className=" flex-1 border-2 border-r-emerald-200 rounded-lg mt-10 md:mt-3">
         <h1 className="text-3xl font-bold text-center mt-3 ">
-        Currently cooking: <span>{bookmarks.length}</span>
+        Currently cooking: <span>{cooking.length}</span>
         </h1>
         <hr className="mt-3" />
 
@@ -71,12 +72,25 @@ const Bookmarks = ({ bookmarks }) => {
               </thead>
               <tbody>
                 {/* row 1 */}
-                
+                {cooking.map((cookingItem, index) => (
+                  <tr key={index}>
+                    <th>{index + 1}</th>
+                    <td>{cookingItem.recipe_name}</td>
+                    <td>{cookingItem.preparing_time} minutes</td>
+                    <td>{cookingItem.calories} calories</td>
+                    <td>
+                      
+                    </td>
+                  </tr>
+                ))}
                 
               </tbody>
             </table>
           </div>
         </div>
+        {cooking.map((cookingItem) => (
+          <Cooking key={cookingItem.recipe_id} cooking={cookingItem} />
+        ))}
       </div>
     </div>
   );
@@ -84,6 +98,11 @@ const Bookmarks = ({ bookmarks }) => {
 
 Bookmarks.propTypes = {
   bookmarks: PropTypes.array,
+  handleAddToCooking: PropTypes.func,
+  blog: PropTypes.object,
+  cooking: PropTypes.array,
+  hideHeading: PropTypes.bool
+
 };
 
 export default Bookmarks;
