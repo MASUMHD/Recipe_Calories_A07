@@ -10,9 +10,9 @@ const Blog = ({ blog,handleAddToBookmark }) => {
 
   return (
     <div className="">
-      <div className=" flex-1 col-span-2 sm:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-16 ml-4 md:ml-0 ">
+      <div className=" flex-1 col-span-2 sm:col-span-1 grid grid-cols-1 md:grid-cols-2 gap-16 ml-4 md:ml-0">
         {/* card 1 */} 
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-[380px]  bg-base-100 shadow-xl ">
           <figure>
             <img
               src={image}

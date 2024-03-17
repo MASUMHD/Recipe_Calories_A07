@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import Bookmark from "../Bookmark/Bookmark";
 
+
 const Bookmarks = ({ bookmarks }) => {
   return (
     <div className=" md:w-[36%]">
@@ -28,17 +29,13 @@ const Bookmarks = ({ bookmarks }) => {
                 {bookmarks.map((bookmark, index) => (
                   <tr key={bookmark.recipe_id}>
                     <th>{index + 1}</th>
-                    <td className="">
-                      {bookmark.recipe_name}
-                    </td>
-                    <td className="">
-                      {bookmark.preparing_time} minutes
-                    </td>
-                    <td className="">
-                      {bookmark.calories} calories
-                    </td>
+                    <td className="">{bookmark.recipe_name}</td>
+                    <td className="">{bookmark.preparing_time} minutes</td>
+                    <td className="">{bookmark.calories} calories</td>
                     <td>
-                      <button className="btn bg-[#0BE58A] rounded-full">
+                      <button onClick=""
+
+                       className="btn bg-[#0BE58A] rounded-full">
                         Preparing
                       </button>
                     </td>
@@ -52,6 +49,35 @@ const Bookmarks = ({ bookmarks }) => {
           <Bookmark key={bookmark.recipe_id} bookmark={bookmark}></Bookmark>
         ))}
       </div>
+
+      <div className=" flex-1 border-2 border-r-emerald-200 rounded-lg mt-10 md:mt-3">
+        <h1 className="text-3xl font-bold text-center mt-3 ">
+        Currently cooking: <span>{bookmarks.length}</span>
+        </h1>
+        <hr className="mt-3" />
+
+        <div className="">
+          <div className="overflow-x-auto">
+            <table className="table">
+              {/* head */}
+              <thead>
+                <tr>
+                  <th></th>
+                  <th className="text-xl ">Name</th>
+                  <th className="text-xl ">Time</th>
+                  <th className="text-xl ">Calories</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -61,4 +87,3 @@ Bookmarks.propTypes = {
 };
 
 export default Bookmarks;
- 
