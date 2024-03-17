@@ -3,7 +3,7 @@ import Bookmark from "../Bookmark/Bookmark";
 import Cooking from "../Cooking/Cooking";
 
 
-const Bookmarks = ({ bookmarks,handleAddToCooking,cooking,hideHeading  }) => {
+const Bookmarks = ({ bookmarks,handleAddToCooking,cooking  }) => {
   return (
     <div className=" md:w-[36%]">
       <div className=" flex-1 border-2 border-r-emerald-200 rounded-lg mt-10 md:mt-0">

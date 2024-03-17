@@ -5,9 +5,9 @@ import Banar from './components/Banar/banar'
 import Blogs from './components/Blogs/Blogs'
 import Bookmarks from './components/Bookmarks/Bookmarks'
 import { useState } from 'react'
-import { toast } from 'react-toastify';
+import { toast } from 'react-toastify'
 import Our from './components/Our/Our'
-// import Cooking from './components/Cooking/Cooking'
+
 
 
 
@@ -15,26 +15,13 @@ function App() {
   
 
   const [bookmarks, setBookmarks] = useState([]);
+  
   const [cooking, setCooking] = useState([]);
-
-  // const handleAddToCooking = (blog) => {
-  //   const newCooking = [...cooking, blog];
-  //   setCooking(newCooking);
-  //   // console.log("blog");
-
-  // }
-  const handleAddToCooking = (blog) => {
-    
-    const index = cooking.findIndex(item => item.recipe_id === blog.recipe_id);
-    if (index !== -1) {
-      
-      const newCooking = [...cooking.slice(0, index), ...cooking.slice(index + 1)];
-      setCooking(newCooking);
-    } else {
-      
-      const newCooking = [...cooking, blog];
-      setCooking(newCooking);
-    }
+  const handleAddToCooking = (rasepe) => {
+    const newCooking = [...cooking, rasepe];
+    setCooking(newCooking);
+    const remove = bookmarks.filter(item => item.recipe_id !== rasepe.recipe_id);
+    setBookmarks(remove);
   }
   
   
@@ -45,7 +32,7 @@ function App() {
 
     if (isAlreadyBookmarked) {
         
-      toast('🙌 Already Exist');
+      toast('🙌 Already Exist'); 
     } else {
        
         const newBookmarks = [...bookmarks, blog];
