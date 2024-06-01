@@ -57,9 +57,13 @@ const Blog = ({ blog,handleAddToBookmark }) => {
               </button>
               <ToastContainer />
             </div>
+
           </div>
+
         </div>
+
       </div>
+      
     </div>
   );
 };
